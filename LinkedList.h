@@ -35,9 +35,14 @@ public:
     void clear();
     double getGPA() const;
     void printGPA() const;
+    int getHours() const;
+    void printHours() const;
+    double getTermGPA(int semester) const;
+    void printTermGPA(int semester) const;
     void sort();
     void readFromFile(const std::string& filename);
     void writeToFile(const std::string& filename);
+    void fixDataFile();
     ~LinkedList();
 
 };

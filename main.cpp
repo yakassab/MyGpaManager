@@ -21,14 +21,17 @@ int main() {
     list.add(Course("Fundamentals", "B+", 3, 1));
     list.add(Course("Production", "B-", 3, 1));
     */
-    //list.clear();
 
-    list.printGPA();
+    //list.removeAt(30);
+    //list.fixDataFile();
+    // list.printTermGPA(5);
+    //list.printHours();
 
 
     cout << endl << endl << endl;
     cout << "This is the list just before saving to file:\n";
     list.print();
+
     list.writeToFile("Data.txt");
     return 0;
 }

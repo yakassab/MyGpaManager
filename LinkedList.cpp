@@ -108,12 +108,12 @@ void LinkedList::insert(int index, const Course& data) {
 // Removes the node at the given index.
 void LinkedList::removeAt(int index) {
     Node* temp = head;
-    if (index == 0) {
+    if (index == 1) {
         head = temp->next;
         delete temp;
     }
     else {
-        for (int i = 0; i < index - 1; i++) {
+        for (int i = 1; i < index - 1; i++) {
             temp = temp->next;
         }
         Node* temp2 = temp->next;
@@ -144,7 +144,7 @@ void LinkedList::readFromFile(const std::string& filename) {
 
 // Writes the list to a file.
 void LinkedList::writeToFile(const std::string& filename) {
-    std::ofstream file(filename);
+    std::ofstream file(filename, std::ios::trunc);
     if (file.is_open()) {
         Node* temp = head;
         while (temp != nullptr) {
@@ -156,6 +156,13 @@ void LinkedList::writeToFile(const std::string& filename) {
         std::cout << "File not found" << std::endl;
         exit(1);
     }
+}
+
+//Function to Put My personal courses in Data.txt
+void LinkedList::fixDataFile() {
+    clear();
+    readFromFile("MyValues.txt");
+    writeToFile("Data.txt");
 }
 
 void LinkedList::print() const {
@@ -179,7 +186,7 @@ double LinkedList::getGPA() const {
 }
 
 void LinkedList::printGPA() const {
-    cout << "GPA: " << getGPA() << endl;
+    cout << "Cumulative GPA: " << getGPA() << endl;
 }
 
 void LinkedList::sort() {
@@ -209,5 +216,40 @@ void LinkedList::clear() {
     head = nullptr;
     size = 0;
 
+}
+
+
+
+int LinkedList::getHours() const {
+    Node* temp = head;
+    int totalHours = 0;
+    while (temp != nullptr) {
+        totalHours += temp->data.getHours();
+        temp = temp->next;
+    }
+    return totalHours;
+}
+
+void LinkedList::printHours() const {
+    cout << "Total Hours Completed: " << getHours() << endl;
+
+}
+
+double LinkedList::getTermGPA(int semester) const {
+    Node* temp = head;
+    double totalPoints = 0;
+    int totalHours = 0;
+    while (temp != nullptr) {
+        if (temp->data.getSemester() == semester) {
+            totalPoints += temp->data.getGrade().getGpa() * temp->data.getHours();
+            totalHours += temp->data.getHours();
+        }
+        temp = temp->next;
+    }
+    return totalPoints / totalHours;
+}
+
+void LinkedList::printTermGPA(int semester) const {
+    cout << "GPA for semester " << semester << " equals: " << getTermGPA(semester) << endl;
 }
 
