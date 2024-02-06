@@ -1,0 +1,18 @@
+# ninja log v5
+2	824	7288834536948205	CMakeFiles/MyGpaManager.dir/main.cpp.obj	1703b0a4a634ee53
+59	840	7288623109303948	CMakeFiles/MyGpaManager.dir/Grade.cpp.obj	202a829cef6730ec
+897	1100	7288834539681692	MyGpaManager.exe	f6fe1fc85ff865cf
+57	897	7288834537678780	CMakeFiles/MyGpaManager.dir/LinkedList.cpp.obj	94ee9c7dcdb0e734
+47	797	7288669682574719	CMakeFiles/MyGpaManager.dir/Course.cpp.obj	707881c92a59a3e3
+2	755	7288835218546974	CMakeFiles/MyGpaManager.dir/main.cpp.obj	1703b0a4a634ee53
+755	939	7288835220364002	MyGpaManager.exe	f6fe1fc85ff865cf
+3	763	7288835577275037	CMakeFiles/MyGpaManager.dir/main.cpp.obj	1703b0a4a634ee53
+763	958	7288835579186894	MyGpaManager.exe	f6fe1fc85ff865cf
+2	759	7288837135300207	CMakeFiles/MyGpaManager.dir/main.cpp.obj	1703b0a4a634ee53
+761	946	7288837137133071	MyGpaManager.exe	f6fe1fc85ff865cf
+2	745	7288837586367782	CMakeFiles/MyGpaManager.dir/main.cpp.obj	1703b0a4a634ee53
+746	922	7288837588104517	MyGpaManager.exe	f6fe1fc85ff865cf
+2	768	7288840240329726	CMakeFiles/MyGpaManager.dir/main.cpp.obj	1703b0a4a634ee53
+768	949	7288840242111498	MyGpaManager.exe	f6fe1fc85ff865cf
+2	755	7288840607962987	CMakeFiles/MyGpaManager.dir/main.cpp.obj	1703b0a4a634ee53
+755	932	7288840609700121	MyGpaManager.exe	f6fe1fc85ff865cf
